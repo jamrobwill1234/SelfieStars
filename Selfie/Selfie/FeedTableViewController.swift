@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class FeedTableViewController: UITableViewController {
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        
+        if PFUser.currentUser() == nil {
+    
+            if let welcomeNC = storyboard?.instantiateViewControllerWithIdentifier("welcomeNC") as? UINavigationController {
+                
+                tabBarController?.presentViewController(welcomeNC, animated: false, completion: nil)
+            }
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

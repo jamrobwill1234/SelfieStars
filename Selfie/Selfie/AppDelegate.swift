@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    Parse.setApplicationId("ehA1xWOdM2dBuz973wGGSmTRJ4icFw6fuzs0soae",
+    clientKey: "MVrVTL4Ckpzrli3o07EdvCRtrztQudOGgXs1RpBW")
+                    
+    
+    
+    
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
